@@ -1,0 +1,1158 @@
+body, html {
+  width: 100%;
+  height: 100%;
+  background-color: #0D1313;
+  color: #B4AA97;
+}
+
+body {
+  margin: 0;
+}
+
+* {
+  scrollbar-color: #FFF #1b241f;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #1b241f;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #674126;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #61422d;
+}
+
+.hidden {
+  visibility: hidden !important;
+  display: none !important;
+}
+
+.shown {
+  visibility: visible !important;
+  display: block !important;
+}
+
+.overshown {
+  overflow-y: scroll;
+}
+
+.overhidden {
+  overflow: hidden;
+}
+
+.backgroundfix {
+  background-attachment: fixed !important;
+}
+
+@font-face {
+  font-family: 'Time Clock';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/E1234-p7pER.woff) format('woff2');
+}
+
+/*____________________________________________________________________________________*/
+/*
+  Load Lab
+  https://github.com/CamdenFoucht/LoadLab
+*/
+
+.multi-spinner-container {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  margin: 30px auto;
+  overflow: hidden;
+}
+
+.multi-spinner {
+  position: absolute;
+  width: calc(100% - 9.9px);
+  height: calc(100% - 9.9px);
+  border: 5px solid transparent;
+  border-top-color: #833721;
+  border-radius: 50%;
+  -webkit-animation: spin 5s cubic-bezier(0.17, 0.49, 0.96, 0.76) infinite;
+  animation: spin 5s cubic-bezier(0.17, 0.49, 0.96, 0.76) infinite;
+}
+
+
+@-webkit-keyframes spin {
+    from {
+        -webkit-transform: rotate(0deg);
+         transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+
+@keyframes spin {
+    from {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+/*____________________________________________________________________________________*/
+/* Header */
+header.masthead {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQIW2NgYGDwBQAAUgBOC6uL4AAAAABJRU5ErkJggg=="), url(../img/background.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: repeat, no-repeat;
+  object-fit: cover;
+  width: 100%;
+  height: 100% !important;
+  text-align: center;
+}
+
+@media (min-width: 719px) {
+  header.masthead.music,
+  header.masthead.main,
+  header.masthead.about{
+    padding-top: 20rem;
+    height: 100%;
+  }
+}
+
+@media (max-width: 719px) {
+  header.masthead {
+    padding-top: 8rem;
+    height: auto;
+  }
+
+  header.masthead.main, header.masthead.music {
+    padding-top: 10rem;
+    height: 100% !important;
+  }
+}
+
+header.gameMasthead {
+  padding-top: 8rem;
+  padding-bottom: calc(10rem - 56px);
+  background-image: url(../img/background.jpg);
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+@media (max-width: 719px) {
+  header.gameMasthead {
+    height: auto;
+  }
+
+  header.testHeader {
+    height: auto;
+  }
+}
+
+header .textbox {
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAE0lEQVQYV2PkFRb+xYAGGGkgCABebgXnHnM+YQAAAABJRU5ErkJggg==") repeat;
+  text-align: center;
+  padding: 15px;
+
+}
+
+@media (max-width: 719px) {
+  header h2 {
+    font-size: 38px
+  }
+}
+
+header.masthead p {
+  font-weight: 300;
+  font-size: 18px;
+  color: #B4AA97;
+}
+
+@media (min-width: 719px) {
+  header.gameMasthead {
+    padding-top: 12rem;
+  }
+}
+
+/*____________________________________________________________________________________*/
+/* Check Box */
+.checkBox {
+  padding: 15px;
+}
+
+.checkBox p {
+  padding: 0;
+  margin: 0;
+}
+
+#pdwCopy {
+  width: 100%;
+  font-size: 28px;
+  text-align: center;
+}
+
+.checkMarkEmpty {
+  height: 35px;
+  background-image: url(../img/square-regular.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.checkMarkFull {
+  height: 35px;
+  background-image: url(../img/check-square-regular.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media (max-width: 719px) {
+  #checkBox {
+    display: block
+  }
+}
+
+/*____________________________________________________________________________________*/
+/* Base 64 Converter */
+#base64EncodeTextBoxStart, #base64EncodeTextBoxEnd, #base64DecodeTextBoxStart, #base64DecodeTextBoxEnd {
+  width: 100%;
+  height: auto;
+}
+
+#base64EncodeTextBoxEnd, #base64DecodeTextBoxEnd {
+  margin-top: 10px;
+}
+
+/*____________________________________________________________________________________*/
+/* Data Transfer Calculator */
+#dataTransferCalculator {
+  margin: 0 0 300px 0;
+}
+
+.dataAmountType {
+  margin: 15px
+}
+
+#dataTransferSpeed,
+#dataTransferAmount {
+  width: 100%;
+  height: 54px;
+}
+
+#dataAmountType,
+#dataTransferType {
+  width: 100%;
+  height: auto;
+}
+
+.estimatedTime * {
+  text-align: center;
+}
+
+/*____________________________________________________________________________________*/
+.welcome, .contacts, .about, .poetry {
+  text-align: center;
+}
+
+
+.poems {
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: center;
+}
+
+.poems div {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/*____________________________________________________________________________________*/
+/* Games First Page*/
+/* Some parts from w3schools */
+#gameIcon {
+  margin: 25px 0;
+}
+
+#gameIcon .col-sm-4 {
+  position: relative;
+  width: 50%;
+}
+
+#gameIcon .col-sm-4:hover .gameOverlay {
+  opacity: 1;
+}
+
+img.gameIcon {
+  width: 380px;
+  height: 380px;
+}
+
+.gameTitle {
+  display: none;
+}
+
+.gameOverlayTitle {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.gameOverlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 15px;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgba(0, 0, 0, 0.80);
+}
+
+@media (max-width: 719px) {
+  img.gameIcon {
+    width: 320px;
+    height: 320px;
+  }
+
+  #gameIcon .col-sm-4 {
+    position: static;
+    display: block;
+    width: 100%;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .gameTitle {
+    display: block;
+  }
+
+  .gameOverlay {
+    display: none;
+  }
+}
+
+/*____________________________________________________________________________________*/
+/* Photo Page Grid*/
+#photoIcon {
+  margin: 25px 0;
+}
+
+#photoIcon .col-sm-4 {  font-family: 'Time Clock';
+
+  position: relative;
+  margin: 15px 0;
+  width: 50%;
+}
+
+#photoIcon .col-sm-4:hover .photoOverlay {
+  opacity: 1;
+}
+
+img.photoIcon {
+  width: 352px;
+  height: 240px;
+}
+
+.photoTitle {
+  display: none;
+}
+
+.photoOverlayTitle {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.photoOverlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 15px;
+  right: 0;
+  width: 352px;
+  height: 240px;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgba(0, 0, 0, 0.80);
+}
+
+@media (max-width: 719px) {
+  img.photoIcon {
+    width: 320px;
+    height: 320px;
+  }
+
+  #photoIcon .col-sm-4 {
+    position: static;
+    display: block;
+    width: 100%;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .photoTitle {
+    display: block;
+  }
+
+  .photoOverlay {
+    display: none;
+  }
+}
+
+/*
+Zoom animation
+*/
+.mfp-with-zoom .mfp-container,
+.mfp-with-zoom.mfp-bg {
+  opacity: 0;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.mfp-with-zoom.mfp-ready .mfp-container {
+  opacity: 1;
+}
+
+.mfp-with-zoom.mfp-ready.mfp-bg {
+  opacity: 0.8;
+}
+
+.mfp-with-zoom.mfp-removing .mfp-container,
+.mfp-with-zoom.mfp-removing.mfp-bg {
+  opacity: 0;
+}
+
+/*____________________________________________________________________________________*/
+/* Individual Game Pages */
+/* Laptops/Tablets width above and/or @ 719px */
+@media (max-width: 719px) {
+  #gameSubMenuTop {
+    display: flex;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    z-index: 2;
+    top: 86px;
+  }
+
+  #gameSubMenuSide {
+    display: none;
+  }
+
+  #gameWikiBody {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    height: 1000px;
+    z-index: 2;
+  }
+
+  .sticky-top {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 86px;
+  }
+}
+
+/* Tablets/Phones width below 719px  */
+@media (min-width: 719px) {
+  #gameSubMenuTop {
+    display: none;
+  }
+
+  #gameSubMenuSide {
+    display: flex;
+    -ms-flex: 0 0 16.666667%;
+    flex: 0 0 16.666667%;
+    max-width: 16.666667%;
+    z-index: 2;
+    top: 86px;
+  }
+
+  #gameWikiBody {
+    -ms-flex: 0 0 83.333333%;
+    flex: 0 0 83.333333%;
+    max-width: 83.333333%;
+    height: 1000px;
+    z-index: 2;
+  }
+}
+
+/*____________________________________________________________________________________*/
+/* Poem Menu */
+#mainPoems, #main, #blogNews {
+  display: flex;
+  min-height: calc(100vh - 40vh);
+}
+
+#mainPoems>article, #main>article, #blogNews>article {
+  flex: 1;
+  overflow-wrap: break-word;
+}
+
+#mainPoems>nav, #main>nav, #blogNews>nav, #mainPoems>aside, #main>aside, #blogNews>aside {
+  flex: 0 0 20vw;
+}
+
+#mainPoems>nav, #main>nav, #blogNews>nav {
+  order: -1;
+}
+
+header, footer, article, nav, aside {
+  padding: 1em;
+}
+
+/*____________________________________________________________________________________*/
+/* Number Silde */
+.numberSlideTextBox {
+  width: 100%;
+  text-align: center;
+  font-size: inherit;
+}
+
+.numberslide {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 30px;
+  background: #464646;
+  transition: opacity .2s;
+  margin-top: 2px;
+}
+
+.numberslide::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background: #833721;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.numberslide::-moz-range-thumb {
+  background: #833721;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#thumb {
+  padding: 10px;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  font-size: 28px;
+  background-color: #464646;
+  color: #0D1313;
+  ;
+}
+
+@media (max-width: 719px) {
+  .numberSlideTextBox {
+    font-size: 18px;
+  }
+}
+
+/*____________________________________________________________________________________*/
+iframe {
+  border: 0;
+  margin: 15px;
+}
+
+hr {
+  border: none;
+  border-top: 5px double #A8897D;
+  color: #A8897D;
+  overflow: visible;
+  text-align: center;
+  height: 5px;
+  width: 100%;
+}
+
+@media (max-width: 719px) {
+  .poems div {
+    display: block;
+  }
+
+  iframe {
+    border: 0;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}
+
+.list-group-item {
+  background-color: rgba(0, 0, 0, 0.0);
+  text-align: center;
+}
+
+/*____________________________________________________________________________________*/
+section.welcome {
+  background-color: #0D1313;
+  color: #B4AA97;
+  text-align: center;
+}
+
+section .dropdown-item {
+  color: #A8897D;
+}
+
+/*____________________________________________________________________________________*/
+/* Tech */
+#tech {
+  display: flex;
+}
+
+@media (min-width: 719px) {
+  #techMenuTemp {
+    position: fixed;
+    transition: none;
+    height: 100%
+  }
+
+  #techMenuTempToggle {
+    display: none !important;
+  }
+}
+
+#techMenuTemp {
+  position: relative;
+  background-color: #A8897D;
+  font-family: 'Allerta Stencil', sans-serif;
+  width: 100%;
+  height: auto;
+  padding: 0;
+  color: #0D1313;
+  flex: 0;
+  z-index: 4;
+}
+
+#techMenuTempToggle {
+  display: block;
+}
+
+#navbarCollapse {
+  transition: width .5s ease-in-out, height .5s ease-in-out;
+}
+
+#techMenuTemp a {
+  color: #0D1313;
+}
+
+#techMenuTempToggle i {
+  font-size: 32px;
+  font-weight: 900;
+  color: #0D1313;
+}
+
+#techMenuTemp .dropdown-menu {
+  background-color: #A8897D;
+}
+
+#techMenuTemp .dropdown-item {
+  color: #0D1313;
+}
+
+#techBody {
+  display: flex;
+  flex-direction: column;
+  flex: 5;
+  background-image: url(../img/background.jpg);
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  overflow-y: scroll;
+}
+
+#navLinks1, #navLinks2 {
+  display: flex;
+  justify-content: center;
+  margin: 15px;
+}
+
+#techBody header {
+  background-color: #833721;
+  color: #A8897D;
+  height: auto;
+  display: block;
+}
+
+.techbox {
+  background-color: #0D1313;
+  opacity: .90;
+  width: 94.44444444444444%;
+  margin: 25px 10px;
+}
+
+/*____________________________________________________________________________________*/
+/* Top Menu */
+nav#menuTemp {
+  position: fixed;
+  background-color: #111717;
+  font-family: 'Allerta Stencil', sans-serif;
+  width: 100%;
+  height: auto;
+  padding: 15px;
+  color: #CDCDCD;
+  z-index: 10;
+}
+
+nav#menuTemp a {
+  color: #CDCDCD;
+}
+
+nav#menuTemp .fab {
+  font-size: 32px;
+  color: #CDCDCD;
+}
+
+nav#menuTemp .dropdown-menu {
+  background-color: #464646;
+}
+
+nav#menuTemp .dropdown-item {
+  color: #CDCDCD;
+}
+
+/*____________________________________________________________________________________*/
+/* Buttons */
+
+.btn-inverted {
+  background-color: #464646;
+  color: #0D1313;
+  padding: 15px;
+  margin: 5px 0;
+  text-align: center;
+  display: block;
+  width: auto;
+  height: auto;
+  text-decoration: none;
+  border: none;
+  transition: all ease-in-out .2s;
+}
+
+.btn-inverted * {
+  color: #0D1313;
+}
+
+.btn-inverted:hover {
+  background-color: #464646;
+  color: #0D1313;
+  border: none;
+  text-decoration: none;
+  padding: 15px;
+}
+
+.btn-inverted.active {
+  background-color: #0D1313;
+  color: #A8897D;
+}
+
+.btn-inverted:hover ~ .underButtonWrapper {
+  width: 100%;
+}
+
+.underButtonWrapper{
+  width: 0%;
+  transition: all ease-in-out .3s
+}
+
+.underButton {
+  width: 100%;
+  height: 6px;
+  border-top: 5px solid #cdcdcd;
+  overflow: hidden;
+  position: relative;
+}
+
+@media (max-width: 1023px) {
+  .btn {
+    display: block;
+  }
+
+.btn:focus, .btn:active {
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+}
+
+/*____________________________________________________________________________________*/
+/* Poems Page*/
+
+.poemDiv {
+  -ms-flex: 0 0 33.333333%;
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+  padding: 0 1rem;
+  display: grid;
+  align-items: stretch;
+}
+
+.poemDiv > h3 > p {
+  height:  200px;
+}
+
+@media (max-width:719px) {
+  .poemDiv {
+    -ms-flex: 0 0 83.333333%;
+    flex: 0 0 83.333333%;
+    max-width: 83.333333%;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
+/* Poems Menu */
+#mainPoemsMenu .btn {
+  background-color: #A8897D;
+  color: #0D1313;
+  padding: 15px;
+  margin: 0;
+}
+
+#mainPoemsMenu .btn:hover {
+  color: #16181b;
+  text-decoration: none;
+  background-color: #f8f9fa;
+  padding: 15px;
+}
+
+#mainPoemsMenu .btn.active {
+  background-color: #0D1313;
+  color: #A8897D;
+}
+
+/* Second Menu Poem */
+#mainPoemsMenuM {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 11;
+  top: 0;
+  left: 0;
+  background-color: #0D1313;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+#mainPoemsContentM {
+  position: relative;
+  opacity: 0;
+  top: 10px;
+  width: 100%;
+  text-align: center;
+  transition: 0.6s ease;
+}
+
+#mainPoemsContentM div {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 32px;
+  color: #B4AA97;
+  display: block;
+  transition: 0.3s;
+}
+
+#buttonOpenPoemsNav {
+  margin-top: 15px;
+  font-size: 28px;
+  text-align: center;
+  border: 2px solid #A8897D;
+  border-radius: 25px;
+}
+
+#mainPoemsMenuM .btn.active {
+  background-color: #A8897D;
+  color: #0D1313;
+}
+
+#mainPoemsMenuM .btn:hover {
+  background-color: #A8897D;
+  color: #0D1313;
+}
+
+#navbarPagesPoems {
+  color: #833721;
+}
+
+#poemsDropDown {
+  background-color: #0D1313;
+}
+
+#mainPoemsBody {
+  flex: 0 0 83.333333%;
+  max-width: 83.333333%;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+@media (max-width: 719px) {
+  #mainPoemsMenu {
+    z-index: 5;
+  }
+
+  #mainPoemsMenu .row {
+    width: 100%;
+    height: auto;
+  }
+
+  #navbarPagesPoems {
+    text-align: center;
+  }
+}
+
+/*____________________________________________________________________________________*/
+/* Videos Page*/
+.youtube-player {
+  width: 560px !important;
+  height: 315px !important;
+}
+
+/*____________________________________________________________________________________*/
+/* Subsections */
+.rowHome {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: auto;
+  margin-right: -15px;
+  margin-left: -15px;
+  margin: 50px 0;
+  border: 5px solid #A8897D;
+}
+
+iframe {
+  width: 100%;
+  height: 380px;
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
+.musicOnRepeat h2 {
+  color: #982875;
+}
+
+.musicChill h2 {
+  color: #902a2a;
+}
+
+.musicRap h2 {
+  color: #96363c;
+}
+
+.musicEDM h2 {
+  color: #864c1a;
+}
+
+.musicTitleBox {
+  background-color: #A8897D;
+  box-shadow: -1px 1px 25px 10px rgba(51%, 38%, 34%, 0.50);
+}
+
+/*____________________________________________________________________________________*/
+/* Some List Commands */
+a {
+  list-style-type: none;
+  text-decoration: none;
+  text-align: inherit;
+  float: none;
+  background-color: transparent;
+}
+
+a:hover {
+  color: #B4AA97;
+}
+
+#mainPoemsMenu .icon-rap {
+  background-color: #915e21;
+  width: auto;
+}
+
+/*____________________________________________________________________________________*/
+p {
+  margin: 16px 0px;
+  font-size: 16px;
+  padding: 10px 0px 5px 5px;
+  float: none;
+  color: #B4AA97;
+}
+
+pre {
+  text-align: center;
+  margin: 16px 0px;
+  font-size: 16px;
+  padding: 10px 0px 5px 5px;
+  float: none;
+  color: #B4AA97;
+}
+
+ul {
+  text-decoration: none;
+}
+
+.wrapword {
+  white-space: -moz-pre-wrap !important;
+  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;
+  /* Opera 4-6 */
+  white-space: -o-pre-wrap;
+  /* Opera 7 */
+  white-space: pre-wrap;
+  /* css-3 */
+  word-wrap: break-word;
+  /* Internet Explorer 5.5+ */
+  white-space: -webkit-pre-wrap;
+  /* Newer versions of Chrome/Safari*/
+  word-break: break-all;
+  white-space: normal;
+}
+
+/*____________________________________________________________________________________*/
+/* Standard */
+
+.fa-chevron-left,
+.fa-chevron-right {
+  padding: 0 10px;
+}
+
+.fa-angle-double-down {
+  font-size: 25px;
+  text-align: center;
+}
+
+.pulse {
+  animation-name: pulse;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  width: 343px;
+  height: 62.5px;
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1)
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.4, 1.4, 1.4);
+    transform: scale3d(1.4, 1.4, 1.4)
+  }
+
+  to {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1)
+  }
+}
+
+
+a {
+  color: #A8897D;
+}
+
+a, ul, ol, li {
+  text-decoration: none;
+  list-style-type: none;
+}
+
+a:hover {
+  text-decoration: none;
+  list-style-type: none;
+}
+
+/*____________________________________________________________________________________*/
+/* Text */
+.h1, .h2, .h3, .h4, .h5, .h6, .p, h1, h2, h3, h4, h5, h6, p {
+  padding: 5px 0;
+  margin: 10px;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+  color: #833721;
+}
+
+.estimatedTime h5 {
+  font-family: 'Time Clock';
+}
+
+.h1, h1 {
+  font-size: 72px;
+}
+
+.h2, h2 {
+  font-size: 60px;
+}
+
+.h3, h3 {
+  font-size: 48px;
+}
+
+@media (max-width: 719px) {
+  .h3, h3 {
+    font-size: 34px;
+  }
+  .BottomButton {
+    font-size: 20px;
+  }
+}
+
+.h4, h4 {
+  font-size: 36px;
+}
+
+.h5, h5 {
+  font-size: 24px;
+}
+
+.h6, h6 {
+  font-size: 20px;
+}
+
+.p, p {
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+}
