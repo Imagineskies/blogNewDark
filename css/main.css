@@ -3,6 +3,8 @@ body, html {
   height: 100%;
   background-color: #0D1313;
   color: #B4AA97;
+  font-size: 16px;
+  
 }
 
 body {
@@ -55,12 +57,27 @@ body {
   background-attachment: fixed !important;
 }
 
+.dib {
+  display: inline-block !important;
+}
+
 @font-face {
-  font-family: 'Time Clock';
+  font-family: 'Kumar One', serif;
+  src: local('Kumar One'), local('KumarOne'), url(../fonts/KumarOne-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Libre Barcode 39 Extended Text', system-ui;
   font-style: normal;
   font-weight: 400;
-  font-display: swap;
-  src: url(fonts/E1234-p7pER.woff) format('woff2');
+  src: url(../fonts/LibreBarcode39ExtendedText-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Merriweather', serif;
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/Merriweather-Regular.ttf);
 }
 
 /*____________________________________________________________________________________*/
@@ -82,7 +99,7 @@ body {
   width: calc(100% - 9.9px);
   height: calc(100% - 9.9px);
   border: 5px solid transparent;
-  border-top-color: #833721;
+  border-top-color: #35464D;
   border-radius: 50%;
   -webkit-animation: spin 5s cubic-bezier(0.17, 0.49, 0.96, 0.76) infinite;
   animation: spin 5s cubic-bezier(0.17, 0.49, 0.96, 0.76) infinite;
@@ -115,11 +132,10 @@ body {
 /*____________________________________________________________________________________*/
 /* Header */
 header.masthead {
-  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQIW2NgYGDwBQAAUgBOC6uL4AAAAABJRU5ErkJggg=="), url(../img/background.jpg);
-  background-position: center center;
-  background-size: cover;
-  background-repeat: repeat, no-repeat;
-  object-fit: cover;
+  background-image: url(../img/Wallpaper.jpg);
+  background-position: center;
+  background-size: stretch;
+  background-repeat: no-repeat;
   width: 100%;
   height: 100% !important;
   text-align: center;
@@ -190,6 +206,12 @@ header.masthead p {
   header.gameMasthead {
     padding-top: 12rem;
   }
+}
+
+.headCTA {
+  color: #35464D;
+  font-size: 2rem;
+  padding-top: 2rem;
 }
 
 /*____________________________________________________________________________________*/
@@ -283,75 +305,6 @@ header.masthead p {
 .poems div {
   display: inline-block;
   vertical-align: middle;
-}
-
-/*____________________________________________________________________________________*/
-/* Games First Page*/
-/* Some parts from w3schools */
-#gameIcon {
-  margin: 25px 0;
-}
-
-#gameIcon .col-sm-4 {
-  position: relative;
-  width: 50%;
-}
-
-#gameIcon .col-sm-4:hover .gameOverlay {
-  opacity: 1;
-}
-
-img.gameIcon {
-  width: 380px;
-  height: 380px;
-}
-
-.gameTitle {
-  display: none;
-}
-
-.gameOverlayTitle {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.gameOverlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 15px;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: .5s ease;
-  background-color: rgba(0, 0, 0, 0.80);
-}
-
-@media (max-width: 719px) {
-  img.gameIcon {
-    width: 320px;
-    height: 320px;
-  }
-
-  #gameIcon .col-sm-4 {
-    position: static;
-    display: block;
-    width: 100%;
-    margin-left: auto !important;
-    margin-right: auto !important;
-  }
-
-  .gameTitle {
-    display: block;
-  }
-
-  .gameOverlay {
-    display: none;
-  }
 }
 
 /*____________________________________________________________________________________*/
@@ -628,97 +581,10 @@ section .dropdown-item {
 }
 
 /*____________________________________________________________________________________*/
-/* Tech */
-#tech {
-  display: flex;
-}
-
-@media (min-width: 719px) {
-  #techMenuTemp {
-    position: fixed;
-    transition: none;
-    height: 100%
-  }
-
-  #techMenuTempToggle {
-    display: none !important;
-  }
-}
-
-#techMenuTemp {
-  position: relative;
-  background-color: #A8897D;
-  font-family: 'Allerta Stencil', sans-serif;
-  width: 100%;
-  height: auto;
-  padding: 0;
-  color: #0D1313;
-  flex: 0;
-  z-index: 4;
-}
-
-#techMenuTempToggle {
-  display: block;
-}
-
-#navbarCollapse {
-  transition: width .5s ease-in-out, height .5s ease-in-out;
-}
-
-#techMenuTemp a {
-  color: #0D1313;
-}
-
-#techMenuTempToggle i {
-  font-size: 32px;
-  font-weight: 900;
-  color: #0D1313;
-}
-
-#techMenuTemp .dropdown-menu {
-  background-color: #A8897D;
-}
-
-#techMenuTemp .dropdown-item {
-  color: #0D1313;
-}
-
-#techBody {
-  display: flex;
-  flex-direction: column;
-  flex: 5;
-  background-image: url(../img/background.jpg);
-  background-attachment: fixed;
-  background-position: center center;
-  background-size: cover;
-  overflow-y: scroll;
-}
-
-#navLinks1, #navLinks2 {
-  display: flex;
-  justify-content: center;
-  margin: 15px;
-}
-
-#techBody header {
-  background-color: #833721;
-  color: #A8897D;
-  height: auto;
-  display: block;
-}
-
-.techbox {
-  background-color: #0D1313;
-  opacity: .90;
-  width: 94.44444444444444%;
-  margin: 25px 10px;
-}
-
-/*____________________________________________________________________________________*/
 /* Top Menu */
-nav#menuTemp {
+nav#menuTemp, #poemPagesNavbar {
   position: fixed;
-  background-color: #111717;
+  animation-fill-mode: forwards;
   font-family: 'Allerta Stencil', sans-serif;
   width: 100%;
   height: auto;
@@ -727,21 +593,39 @@ nav#menuTemp {
   z-index: 10;
 }
 
-nav#menuTemp a {
-  color: #CDCDCD;
+nav#menuTemp a, #poemPagesNavbar a {
+  color: #35464D;
+  text-decoration: underline;
+  font-size: 1.25rem;
 }
 
-nav#menuTemp .fab {
-  font-size: 32px;
-  color: #CDCDCD;
+nav#menuTemp .fab, #poemPagesNavbar .fab {
+  font-size: 1.25rem;
+  color: #35464D;
 }
 
-nav#menuTemp .dropdown-menu {
-  background-color: #464646;
+nav#menuTemp .dropdown-menu, #poemPagesNavbar .dropdown-menu {
+  background-color: #35464D;
 }
 
-nav#menuTemp .dropdown-item {
-  color: #CDCDCD;
+nav#menuTemp .dropdown-item, #poemPagesNavbar .dropdown-item {
+  color: #35464D;
+}
+
+@media (max-width: 719px) {
+  nav#menuTemp .dropdown-menu, #poemPagesNavbar .dropdown-menu {
+    background-color: #D4CDC1;
+  }
+  nav#menuTemp, #poemPagesNavbar {
+    background-color: #D4CDC1;
+  }
+}
+
+.navbar-toggler {
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  margin: 5px;
 }
 
 /*____________________________________________________________________________________*/
@@ -1110,25 +994,37 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Quicksand', sans-serif;
-  font-weight: 500;
-  color: #833721;
+  font-family: 'Allerta Stencil', sans-serif;
+  font-weight: 400;
+  color: #35464D;
 }
 
 .estimatedTime h5 {
   font-family: 'Time Clock';
 }
 
+.siteTitle, .pageTitle {
+  font-family: 'Kumar One', serif !important;
+}
+
+.siteSubTitle{
+  font-family: 'Libre Barcode 39 Extended Text', system-ui;
+}
+
+.pageSubTitle {
+  color: #6D7C6B !important;
+}
+
 .h1, h1 {
-  font-size: 72px;
+  font-size: 4.5rem;
 }
 
 .h2, h2 {
-  font-size: 60px;
+  font-size: 3.75rem;
 }
 
 .h3, h3 {
-  font-size: 48px;
+  font-size: 3rem;
 }
 
 @media (max-width: 719px) {
@@ -1141,18 +1037,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .h4, h4 {
-  font-size: 36px;
+  font-size: 2.25rem;
 }
 
 .h5, h5 {
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 
 .h6, h6 {
-  font-size: 20px;
+  font-size:1.25rem;
 }
 
-.p, p {
-  font-size: 16px;
-  font-family: 'Open Sans', sans-serif;
+.p, p, pre, .pre {
+  font-size: 1rem;
+  font-family: 'Merriweather', serif;
 }

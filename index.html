@@ -9,7 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="img/background.jpg">
 
-  <title>Pulcherrimum Quaerere | Home</title>
+  <title>Home</title>
   <!-- Bootstrap -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <!-- Style Css -->
@@ -19,57 +19,65 @@
   <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Allerta+Stencil&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumar+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Extended+Text&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/ed299dde65.js" crossorigin="anonymous"></script>
 
 </head>
 
 <body>
 
-  <nav id="menuTemp" class="navbar navbar-expand-lg navbar-dark" aria-label="navbar">
+  <nav id="menuTemp" class="navbar navbar-expand-xl navbar-togglable fixed-top" aria-label="navbar">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">PulcherrimumQuaerere.xyz</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsmenuTemp"
+        aria-controls="navbarsmenuTemp" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="navbarsExample05">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="Pages/about.html">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="Pages/writings.html">Writings</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="Pages/media.html">Media</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="Pages/sandbox.html">Sandbox</a>
-          </li>
-        </ul>
+      <div class="collapse navbar-collapse" id="navbarsmenuTemp">
+        <a class="navbar-brand siteTitle" href="#"></a>
       </div>
     </div>
   </nav>
 
- 
+
   <header class="masthead">
     <div class="container-fluid h-100 p-0">
       <div class="row h-100 mx-auto d-flex align-items-center">
-        <div class="col-lg-8 mx-auto d-flex justify-content-center textbox">
+        <div class="col-lg-8 mx-auto d-flex justify-content-center">
           <div>
-            <h2>Welcome to my blog!</h2>
-          <p>
-            Here you'll find everything I love and do. My hobbies include photography, music production, poetry, and anything that comes to my mind.
-            Have fun!
-          </p>
+            <h2 class="siteTitle"></h2>
+            <h2 class="siteSubTitle"></h2>
+            <i class="fa-solid fa-angles-down headCTA"></i>
           </div>
         </div>
       </div>
     </div>
   </header>
+
+  <section class="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 mx-auto p-5 m-5">
+          <h2>Hello!</h2>
+
+          <p>
+            My name is Rayna, and this is a blog that I host on GitHub
+            as a place to exist online in my own realm. I grew up being super
+            into web development and put a lot of time into learning how to do
+            this! While I don't spend as much time on it now, it is always
+            something that holds a place in my heart. My other hobbies include
+            photography, poetry, computer IT, political science, so much more.
+            If you'd like to get to know more, please follow along!
+          </p>          
+        </div>
+      </div>
+    </div>
+  </section>
 
 
   <!-- Bootstrap core JavaScript -->
@@ -81,6 +89,8 @@
 
   <!-- Custom scripts for this template -->
   <script src="js/main.js"></script>
+  <script src="js/pvar.js"></script>
+  
 
 </body>
 

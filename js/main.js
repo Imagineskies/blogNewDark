@@ -24,16 +24,20 @@ var lowerCase = "abcdefghijklmnopqrstuvwxyz";
 var numbers = "";
 var special = "";
 var extnd = "";
-var dataTransferAmount = document.getElementById('dataTransferAmount').value;
+/* var dataTransferAmount = document.getElementById('dataTransferAmount').value;
 var dataTransferSpeed = document.getElementById('dataTransferSpeed').value;
 var estimatedTimeDays = document.getElementById('estimatedTimeDays').innerHTML;
 var estimatedTimeHours = document.getElementById('estimatedTimeHours').innerHTML;
 var estimatedTimeMinutes = document.getElementById('estimatedTimeMinutes').innerHTML;
 var estimatedTimeSeconds = document.getElementById('estimatedTimeSeconds').innerHTML;
+*/
 var dtcStart = document.getElementById('dtcStart');
 var dataSize = 0;
 var dataSpeed = 0;
 var factorAmount;
+var gameSubMenuTop = $('#gameSubMenuTop');
+var shortImgScale = document.getElementById('shortImgScale');
+var longImgScale = document.getElementById('longImgScale');
 
 // Constants
 const checkMarkOne = document.querySelector('#checkMarkOne');
@@ -45,7 +49,6 @@ const checkMarkSix = document.querySelector('#checkMarkSix');
 const checkMarkSeven = document.querySelector('#checkMarkSeven');
 const checkMarkEight = document.querySelector('#checkMarkEight');
 const checkMarkEleven = document.querySelector('#checkMarkEleven');
-var gameSubMenuTop = $('#gameSubMenuTop');
 const base64ConvertBtn = $('#base64ConvertButton')[0];
 const base64Title = $('#base64Title')[0];
 const base64Output = $("#base64EncodeTextBoxEnd")[0];
@@ -58,11 +61,12 @@ const textTwo = $('textTwo');
 
 /*
 ____________________________________________________________________________________
-Functions
+Functions / Actions
 ____________________________________________________________________________________
 */
 
-
+document.documentElement.style.setProperty("--figureShortHight", shortImgScale);
+document.documentElement.style.setProperty("--figureLongHight", longImgScale);
 
 
 
@@ -290,6 +294,19 @@ ________________________________________________________________________________
 Event Listeners
 ____________________________________________________________________________________
 */
+
+/*window.onscroll = function() {
+  var scrollPos = window.scrollY || window.scrollTop || document.getElementsByTagName("html")[0].scrollTop;
+  console.log(scrollPos);
+  if (scrollPos <= 115) {
+    menuTemp.classList.remove('animate__animated', 'animate__slideInDown');
+    menuTemp.classList.add('animate__animated', 'animate__slideOutUp');
+  }
+  if (scrollPos >= 115) {
+    menuTemp.classList.remove('animate__animated', 'animate__slideOutUp', 'hidden');
+    menuTemp.classList.add('animate__animated', 'animate__slideInDown');
+  }
+}*/
 
 checkMarkOne.addEventListener('click', function() {
   if (checkMarkOnePlace == 'unclicked') {

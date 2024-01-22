@@ -26,78 +26,7 @@
 
 <body id="poemBody">
 
-  <!-- Nav Bar -->
-
-  <nav id="menuTemp" class="navbar navbar-expand-xl navbar-togglable fixed-top">
-    <div class="container">
-
-      <!-- Toggler -->
-      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <i class="fas fa-bars"></i>
-      </button>
-      <!-- Collapse -->
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-
-        <!-- Heading -->
-        <ul class="nav navbar-nav mr-auto custom-navbar">
-          <li class="navbar navbar-light">
-            <span class="navbar-brand">PulcherrimumQuaerere.xyz</span>
-          </li>
-        </ul>
-
-        <!-- Links -->
-        <ul class="nav navbar-nav ml-auto custom-navbar">
-
-          <li class="nav-item-divider">
-            <span class="nav-link">
-              <span></span>
-            </span>
-          </li>
-
-          <li class="nav-item active">
-            <a class="nav-link" href="../../index.html">
-              Home
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="../about.html">
-              About
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="../poems.html">
-              Poems
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="../music.html">
-              Music
-            </a>
-          </li>
-
-          <li class="nav-item dropdown">
-            <a class="nav-link" href="../playground.html">
-              Playground
-            </a>
-          </li>
-
-          <!-- Nav Divider -->
-
-          <li class="nav-item-divider">
-            <span class="nav-link">
-              <span></span>
-            </span>
-          </li>
-
-        </ul>
-
-      </div> <!-- / .navbar-collapse -->
-
-    </div> <!-- / .container -->
-  </nav>
+  <nav id="poemPagesNavbar" class="navbar navbar-expand-lg navbar-dark" aria-label="navbar"></nav>
 
   <header class="masthead">
     <div class="container">
@@ -210,6 +139,8 @@
 
   <!-- Custom scripts for this template -->
   <script src="../../js/main.js"></script>
+  <script src="../../js/pvar.js"></script>
+
   <script>
     window.onload = function() {
       var content = document.getElementById('content');
