@@ -81,52 +81,51 @@ body {
 }
 
 /*____________________________________________________________________________________*/
-/*
-  Load Lab
-  https://github.com/CamdenFoucht/LoadLab
-*/
-
-.multi-spinner-container {
-  width: 150px;
-  height: 150px;
-  position: relative;
-  margin: 30px auto;
-  overflow: hidden;
+/* Top Menu */
+nav#menuTemp, #poemPagesNavbar {
+  position: fixed;
+  animation-fill-mode: forwards;
+  font-family: 'Allerta Stencil', sans-serif;
+  width: 100%;
+  height: auto;
+  padding: 15px;
+  color: #CDCDCD;
+  z-index: 10;
 }
 
-.multi-spinner {
-  position: absolute;
-  width: calc(100% - 9.9px);
-  height: calc(100% - 9.9px);
-  border: 5px solid transparent;
-  border-top-color: #35464D;
-  border-radius: 50%;
-  -webkit-animation: spin 5s cubic-bezier(0.17, 0.49, 0.96, 0.76) infinite;
-  animation: spin 5s cubic-bezier(0.17, 0.49, 0.96, 0.76) infinite;
+nav#menuTemp a, #poemPagesNavbar a {
+  color: #35464D;
+  text-decoration: underline;
+  font-size: 1.25rem;
 }
 
-
-@-webkit-keyframes spin {
-    from {
-        -webkit-transform: rotate(0deg);
-         transform: rotate(0deg);
-    }
-    to {
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
+nav#menuTemp .fab, #poemPagesNavbar .fab {
+  font-size: 1.25rem;
+  color: #35464D;
 }
 
+nav#menuTemp .dropdown-menu, #poemPagesNavbar .dropdown-menu {
+  background-color: #35464D;
+}
 
-@keyframes spin {
-    from {
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }
-    to {
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
+nav#menuTemp .dropdown-item, #poemPagesNavbar .dropdown-item {
+  color: #35464D;
+}
+
+@media (max-width: 719px) {
+  nav#menuTemp .dropdown-menu, #poemPagesNavbar .dropdown-menu {
+    background-color: #D4CDC1;
+  }
+  nav#menuTemp, #poemPagesNavbar {
+    background-color: #D4CDC1;
+  }
+}
+
+.navbar-toggler {
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  margin: 5px;
 }
 
 /*____________________________________________________________________________________*/
@@ -214,494 +213,24 @@ header.masthead p {
   padding-top: 2rem;
 }
 
-/*____________________________________________________________________________________*/
-/* Check Box */
-.checkBox {
-  padding: 15px;
-}
-
-.checkBox p {
-  padding: 0;
-  margin: 0;
-}
-
-#pdwCopy {
-  width: 100%;
-  font-size: 28px;
-  text-align: center;
-}
-
-.checkMarkEmpty {
-  height: 35px;
-  background-image: url(../img/square-regular.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.checkMarkFull {
-  height: 35px;
-  background-image: url(../img/check-square-regular.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-@media (max-width: 719px) {
-  #checkBox {
-    display: block
-  }
-}
-
-/*____________________________________________________________________________________*/
-/* Base 64 Converter */
-#base64EncodeTextBoxStart, #base64EncodeTextBoxEnd, #base64DecodeTextBoxStart, #base64DecodeTextBoxEnd {
-  width: 100%;
-  height: auto;
-}
-
-#base64EncodeTextBoxEnd, #base64DecodeTextBoxEnd {
-  margin-top: 10px;
-}
-
-/*____________________________________________________________________________________*/
-/* Data Transfer Calculator */
-#dataTransferCalculator {
-  margin: 0 0 300px 0;
-}
-
-.dataAmountType {
-  margin: 15px
-}
-
-#dataTransferSpeed,
-#dataTransferAmount {
-  width: 100%;
-  height: 54px;
-}
-
-#dataAmountType,
-#dataTransferType {
-  width: 100%;
-  height: auto;
-}
-
-.estimatedTime * {
-  text-align: center;
-}
-
-/*____________________________________________________________________________________*/
-.welcome, .contacts, .about, .poetry {
-  text-align: center;
-}
-
-
-.poems {
-  white-space: nowrap;
-  overflow: hidden;
-  text-align: center;
-}
-
-.poems div {
-  display: inline-block;
-  vertical-align: middle;
-}
-
-/*____________________________________________________________________________________*/
-/* Photo Page Grid*/
-#photoIcon {
-  margin: 25px 0;
-}
-
-#photoIcon .col-sm-4 {  font-family: 'Time Clock';
-
-  position: relative;
-  margin: 15px 0;
-  width: 50%;
-}
-
-#photoIcon .col-sm-4:hover .photoOverlay {
-  opacity: 1;
-}
-
-img.photoIcon {
-  width: 352px;
-  height: 240px;
-}
-
-.photoTitle {
-  display: none;
-}
-
-.photoOverlayTitle {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.photoOverlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 15px;
-  right: 0;
-  width: 352px;
-  height: 240px;
-  opacity: 0;
-  transition: .5s ease;
-  background-color: rgba(0, 0, 0, 0.80);
-}
-
-@media (max-width: 719px) {
-  img.photoIcon {
-    width: 320px;
-    height: 320px;
-  }
-
-  #photoIcon .col-sm-4 {
-    position: static;
-    display: block;
-    width: 100%;
-    margin-left: auto !important;
-    margin-right: auto !important;
-  }
-
-  .photoTitle {
-    display: block;
-  }
-
-  .photoOverlay {
-    display: none;
-  }
-}
-
-/*
-Zoom animation
-*/
-.mfp-with-zoom .mfp-container,
-.mfp-with-zoom.mfp-bg {
-  opacity: 0;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
-}
-
-.mfp-with-zoom.mfp-ready .mfp-container {
-  opacity: 1;
-}
-
-.mfp-with-zoom.mfp-ready.mfp-bg {
-  opacity: 0.8;
-}
-
-.mfp-with-zoom.mfp-removing .mfp-container,
-.mfp-with-zoom.mfp-removing.mfp-bg {
-  opacity: 0;
-}
-
-/*____________________________________________________________________________________*/
-/* Individual Game Pages */
-/* Laptops/Tablets width above and/or @ 719px */
-@media (max-width: 719px) {
-  #gameSubMenuTop {
-    display: flex;
-    -ms-flex: 0 0 100%;
-    flex: 0 0 100%;
-    max-width: 100%;
-    z-index: 2;
-    top: 86px;
-  }
-
-  #gameSubMenuSide {
-    display: none;
-  }
-
-  #gameWikiBody {
-    -ms-flex: 0 0 100%;
-    flex: 0 0 100%;
-    max-width: 100%;
-    height: 1000px;
-    z-index: 2;
-  }
-
-  .sticky-top {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 86px;
-  }
-}
-
-/* Tablets/Phones width below 719px  */
-@media (min-width: 719px) {
-  #gameSubMenuTop {
-    display: none;
-  }
-
-  #gameSubMenuSide {
-    display: flex;
-    -ms-flex: 0 0 16.666667%;
-    flex: 0 0 16.666667%;
-    max-width: 16.666667%;
-    z-index: 2;
-    top: 86px;
-  }
-
-  #gameWikiBody {
-    -ms-flex: 0 0 83.333333%;
-    flex: 0 0 83.333333%;
-    max-width: 83.333333%;
-    height: 1000px;
-    z-index: 2;
-  }
-}
-
-/*____________________________________________________________________________________*/
-/* Poem Menu */
-#mainPoems, #main, #blogNews {
-  display: flex;
-  min-height: calc(100vh - 40vh);
-}
-
-#mainPoems>article, #main>article, #blogNews>article {
-  flex: 1;
-  overflow-wrap: break-word;
-}
-
-#mainPoems>nav, #main>nav, #blogNews>nav, #mainPoems>aside, #main>aside, #blogNews>aside {
-  flex: 0 0 20vw;
-}
-
-#mainPoems>nav, #main>nav, #blogNews>nav {
-  order: -1;
-}
-
-header, footer, article, nav, aside {
-  padding: 1em;
-}
-
-/*____________________________________________________________________________________*/
-/* Number Silde */
-.numberSlideTextBox {
-  width: 100%;
-  text-align: center;
-  font-size: inherit;
-}
-
-.numberslide {
-  -webkit-appearance: none;
-  width: 100%;
-  height: 30px;
-  background: #464646;
-  transition: opacity .2s;
-  margin-top: 2px;
-}
-
-.numberslide::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  background: #833721;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-.numberslide::-moz-range-thumb {
-  background: #833721;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-#thumb {
-  padding: 10px;
-  width: 100%;
-  height: auto;
-  text-align: center;
-  font-size: 28px;
-  background-color: #464646;
-  color: #0D1313;
-  ;
-}
-
-@media (max-width: 719px) {
-  .numberSlideTextBox {
-    font-size: 18px;
-  }
-}
-
-/*____________________________________________________________________________________*/
-iframe {
-  border: 0;
-  margin: 15px;
-}
-
-hr {
-  border: none;
-  border-top: 5px double #A8897D;
-  color: #A8897D;
-  overflow: visible;
-  text-align: center;
-  height: 5px;
-  width: 100%;
-}
-
-@media (max-width: 719px) {
-  .poems div {
-    display: block;
-  }
-
-  iframe {
-    border: 0;
-    margin-top: 15px;
-    margin-bottom: 15px;
-  }
-}
-
-.list-group-item {
-  background-color: rgba(0, 0, 0, 0.0);
-  text-align: center;
-}
-
-/*____________________________________________________________________________________*/
-section.welcome {
-  background-color: #0D1313;
-  color: #B4AA97;
-  text-align: center;
-}
-
-section .dropdown-item {
-  color: #A8897D;
-}
-
-/*____________________________________________________________________________________*/
-/* Top Menu */
-nav#menuTemp, #poemPagesNavbar {
-  position: fixed;
-  animation-fill-mode: forwards;
-  font-family: 'Allerta Stencil', sans-serif;
-  width: 100%;
-  height: auto;
-  padding: 15px;
-  color: #CDCDCD;
-  z-index: 10;
-}
-
-nav#menuTemp a, #poemPagesNavbar a {
-  color: #35464D;
-  text-decoration: underline;
-  font-size: 1.25rem;
-}
-
-nav#menuTemp .fab, #poemPagesNavbar .fab {
-  font-size: 1.25rem;
-  color: #35464D;
-}
-
-nav#menuTemp .dropdown-menu, #poemPagesNavbar .dropdown-menu {
-  background-color: #35464D;
-}
-
-nav#menuTemp .dropdown-item, #poemPagesNavbar .dropdown-item {
-  color: #35464D;
-}
-
-@media (max-width: 719px) {
-  nav#menuTemp .dropdown-menu, #poemPagesNavbar .dropdown-menu {
-    background-color: #D4CDC1;
-  }
-  nav#menuTemp, #poemPagesNavbar {
-    background-color: #D4CDC1;
-  }
-}
-
-.navbar-toggler {
-  border: none;
-  box-shadow: none;
-  padding: 0;
-  margin: 5px;
-}
-
-/*____________________________________________________________________________________*/
-/* Buttons */
-
-.btn-inverted {
-  background-color: #464646;
-  color: #0D1313;
-  padding: 15px;
-  margin: 5px 0;
-  text-align: center;
-  display: block;
-  width: auto;
-  height: auto;
-  text-decoration: none;
-  border: none;
-  transition: all ease-in-out .2s;
-}
-
-.btn-inverted * {
-  color: #0D1313;
-}
-
-.btn-inverted:hover {
-  background-color: #464646;
-  color: #0D1313;
-  border: none;
-  text-decoration: none;
-  padding: 15px;
-}
-
-.btn-inverted.active {
-  background-color: #0D1313;
-  color: #A8897D;
-}
-
-.btn-inverted:hover ~ .underButtonWrapper {
-  width: 100%;
-}
-
-.underButtonWrapper{
-  width: 0%;
-  transition: all ease-in-out .3s
-}
-
-.underButton {
-  width: 100%;
-  height: 6px;
-  border-top: 5px solid #cdcdcd;
-  overflow: hidden;
-  position: relative;
-}
-
-@media (max-width: 1023px) {
-  .btn {
-    display: block;
-  }
-
-.btn:focus, .btn:active {
-  outline: none;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-
-}
 
 /*____________________________________________________________________________________*/
 /* Poems Page*/
 
 .poemDiv {
-  -ms-flex: 0 0 33.333333%;
-  flex: 0 0 33.333333%;
-  max-width: 33.333333%;
   padding: 0 1rem;
-  display: grid;
+  display: inline-block;
   align-items: stretch;
+  margin: 1%;
+  border: 2px solid #E1C39A;
+  max-width: 25%;
+  max-height: 40%;
+  width: 100%;
+  height: 100%;
+}
+
+.poemDiv h3 {
+  font-size: 2.25rem;
 }
 
 .poemDiv > h3 > p {
@@ -710,9 +239,7 @@ nav#menuTemp .dropdown-item, #poemPagesNavbar .dropdown-item {
 
 @media (max-width:719px) {
   .poemDiv {
-    -ms-flex: 0 0 83.333333%;
-    flex: 0 0 83.333333%;
-    max-width: 83.333333%;
+    max-width: 100%;
     margin-left: auto !important;
     margin-right: auto !important;
   }
@@ -817,6 +344,243 @@ nav#menuTemp .dropdown-item, #poemPagesNavbar .dropdown-item {
     text-align: center;
   }
 }
+
+/*____________________________________________________________________________________*/
+/* Check Box */
+.checkBox {
+  padding: 15px;
+}
+
+.checkBox p {
+  padding: 0;
+  margin: 0;
+}
+
+#pdwCopy {
+  width: 100%;
+  font-size: 28px;
+  text-align: center;
+}
+
+.checkMarkEmpty {
+  height: 35px;
+  background-image: url(../img/square-regular.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.checkMarkFull {
+  height: 35px;
+  background-image: url(../img/check-square-regular.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media (max-width: 719px) {
+  #checkBox {
+    display: block
+  }
+}
+
+/*____________________________________________________________________________________*/
+/* Base 64 Converter */
+#base64EncodeTextBoxStart, #base64EncodeTextBoxEnd, #base64DecodeTextBoxStart, #base64DecodeTextBoxEnd {
+  width: 100%;
+  height: auto;
+}
+
+#base64EncodeTextBoxEnd, #base64DecodeTextBoxEnd {
+  margin-top: 10px;
+}
+
+/*____________________________________________________________________________________*/
+/* Data Transfer Calculator */
+#dataTransferCalculator {
+  margin: 0 0 300px 0;
+}
+
+.dataAmountType {
+  margin: 15px
+}
+
+#dataTransferSpeed,
+#dataTransferAmount {
+  width: 100%;
+  height: 54px;
+}
+
+#dataAmountType,
+#dataTransferType {
+  width: 100%;
+  height: auto;
+}
+
+.estimatedTime * {
+  text-align: center;
+}
+
+/*____________________________________________________________________________________*/
+/* Number Silde */
+.numberSlideTextBox {
+  width: 100%;
+  text-align: center;
+  font-size: inherit;
+}
+
+.numberslide {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 30px;
+  background: #464646;
+  transition: opacity .2s;
+  margin-top: 2px;
+}
+
+.numberslide::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background: #833721;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.numberslide::-moz-range-thumb {
+  background: #833721;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#thumb {
+  padding: 10px;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  font-size: 28px;
+  background-color: #464646;
+  color: #0D1313;
+  ;
+}
+
+@media (max-width: 719px) {
+  .numberSlideTextBox {
+    font-size: 18px;
+  }
+}
+
+/*____________________________________________________________________________________*/
+iframe {
+  border: 0;
+  margin: 15px;
+}
+
+hr {
+  border: none;
+  border-top: 5px double #A8897D;
+  color: #A8897D;
+  overflow: visible;
+  text-align: center;
+  height: 5px;
+  width: 100%;
+}
+
+@media (max-width: 719px) {
+  .poems div {
+    display: block;
+  }
+
+  iframe {
+    border: 0;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}
+
+.list-group-item {
+  background-color: rgba(0, 0, 0, 0.0);
+  text-align: center;
+}
+
+/*____________________________________________________________________________________*/
+section.welcome {
+  background-color: #0D1313;
+  color: #B4AA97;
+  text-align: center;
+}
+
+section .dropdown-item {
+  color: #A8897D;
+}
+
+/*____________________________________________________________________________________*/
+/* Buttons */
+
+.btn-inverted {
+  background-color: #464646;
+  color: #0D1313;
+  padding: 15px;
+  margin: 5px 0;
+  text-align: center;
+  display: block;
+  width: auto;
+  height: auto;
+  text-decoration: none;
+  border: none;
+  transition: all ease-in-out .2s;
+}
+
+.btn-inverted * {
+  color: #0D1313;
+}
+
+.btn-inverted:hover {
+  background-color: #464646;
+  color: #0D1313;
+  border: none;
+  text-decoration: none;
+  padding: 15px;
+}
+
+.btn-inverted.active {
+  background-color: #0D1313;
+  color: #A8897D;
+}
+
+.btn-inverted:hover ~ .underButtonWrapper {
+  width: 100%;
+}
+
+.underButtonWrapper{
+  width: 0%;
+  transition: all ease-in-out .3s
+}
+
+.underButton {
+  width: 100%;
+  height: 6px;
+  border-top: 5px solid #cdcdcd;
+  overflow: hidden;
+  position: relative;
+}
+
+@media (max-width: 1023px) {
+  .btn {
+    display: block;
+  }
+
+.btn:focus, .btn:active {
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+}
+
 
 /*____________________________________________________________________________________*/
 /* Videos Page*/
