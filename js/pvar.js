@@ -7,6 +7,7 @@
 var siteTitle = "Pulcherrimum Quaerere";
 var siteURL = "https://pulcherrimumquaerere.com/";
 var siteSubTitle = "look beautiful"
+var footerLine = "Pulcherrimum Quaerere | 2024 | Look Beauful";
 
 var homePageMenu = `
 <li class="nav-item">
@@ -18,7 +19,7 @@ var homePageMenu = `
     </a>
     <ul class="dropdown-menu">
         <li><a class="dropdown-item" href="Pages/poems.html">Poems</a></li>
-        <li><a class="dropdown-item" href="#">Infrequents</a></li>
+        <li><a class="dropdown-item" href="Pages/infrequents.html">Infrequents</a></li>
     </ul>
 </li>
 <li class="nav-item">
@@ -37,7 +38,7 @@ var pagesMenu = `
     </a>
     <ul class="dropdown-menu">
         <li><a class="dropdown-item" href="poems.html">Poems</a></li>
-        <li><a class="dropdown-item" href="#">Infrequents</a></li>
+        <li><a class="dropdown-item" href="infrequents.html">Infrequents</a></li>
     </ul>
 </li>
 <li class="nav-item">
@@ -47,24 +48,26 @@ var pagesMenu = `
 var pagesMenuClasses = "navbar-nav ms-auto mb-2 mb-lg-0"
 
 var navbarsPoemPages = `
-<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsPP" aria-controls="navbarsPP" aria-expanded="false" aria-label="Toggle navigation">
-<span class="navbar-toggler-icon"></span>
-</button>
-<div class="collapse navbar-collapse" id="navbarsPP">
-<a class="navbar-brand siteTitle" href="#">Pulcherrimum Quaerere</a>
-<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 <li class="nav-item">
-<a class="nav-link" href="../../index.html">Home</a>
+    <a class="nav-link" href="../../index.html">Home</a>
+</li>
+<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Writings
+    </a>
+    <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="../poems.html">Poems</a></li>
+        <li><a class="dropdown-item" href="../infrequents.html">Infrequents</a></li>
+    </ul>
 </li>
 <li class="nav-item">
-<a class="nav-link" href="../writings.html">Writings</a>
+    <a class="nav-link" href="../sandbox.html">Sandbox</a>
 </li>
-<li class="nav-item">
-<a class="nav-link" href="../sandbox.html">Sandbox</a>
-</li>
-</ul>
-</div>
 `;
+var navbarsPoemPagesClasses = "navbar-nav ms-auto mb-2 mb-lg-0";
+
+
+
 
 
 
@@ -77,9 +80,9 @@ function menuBlock(insideHTML, parentClasses, parentElement) {
     $(parentElement).append(x);
 }
 
-function menuBlockP(insideHTML, parentElement) {
-    let x = document.createElement('div');
-    x.setAttribute('class', 'container-fluid');;
+function addFooter(insideHTML, parentClasses, parentElement) {
+    let x = document.createElement('ul');
+    x.setAttribute('class', parentClasses);
     x.innerHTML = insideHTML;
     $(parentElement).append(x);
 }
@@ -88,7 +91,8 @@ function menuBlockP(insideHTML, parentElement) {
 
 $(".siteTitle").html(siteTitle);
 $(".siteURL").html(siteURL);
-$(".siteSubTitle").html(siteSubTitle)
+$(".siteSubTitle").html(siteSubTitle);
+$("#footerLine").html(footerLine);
 menuBlock(homePageMenu, homePageMenuClasses, "#navbarsmenuTemp");
 menuBlock(pagesMenu, pagesMenuClasses, "#navbarsPages");
-menuBlockP(navbarsPoemPages, "#poemPagesNavbar")
+menuBlock(navbarsPoemPages, navbarsPoemPagesClasses, "#navbarsPoemPages")

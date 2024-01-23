@@ -68,6 +68,7 @@ ________________________________________________________________________________
 document.documentElement.style.setProperty("--figureShortHight", shortImgScale);
 document.documentElement.style.setProperty("--figureLongHight", longImgScale);
 
+/* Number Counter */
 function numberCount(item) {
   item = item.innerText;
   item = item.split(/[\s]+|(?!['])\W+/);
@@ -81,8 +82,6 @@ function numberCount(item) {
 
 /* Data Transfer Calculator */
 
-
-//
 function roundUp(num, precision) {
   precision = Math.pow(10, precision);
   return Math.ceil(num / precision);
@@ -205,7 +204,9 @@ String.prototype.shuffle = function () {
         n = a.length;
 
     for(var i = n - 1; i > 0; i--) {
-        var j = Math.floor(Math.random() * (i + 1));
+        var h = new Uint32Array(1);
+        window.crypto.getRandomValues(h);
+        var j = h[0] % (i + 1);
         var tmp = a[i];
         a[i] = a[j];
         a[j] = tmp;

@@ -10,7 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="../img/background.jpg">
 
-  <title>Writing</title>
+  <title>Poems</title>
 
   <!-- Bootstrap -->
   <link rel="stylesheet" href="../css/bootstrap.min.css">
@@ -23,9 +23,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Extended+Text&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Allerta+Stencil&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Extended&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
     integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-
 </head>
 
 
@@ -48,7 +48,11 @@
       <div class="row h-100 mx-auto d-flex align-items-center">
         <div id="textOne" class="col-lg-8 mx-auto d-flex justify-content-center">
           <div>
-            <h2>Poems</h2>
+            <div>
+              <h2 class="pageTitle dib">Poems</h2>
+              <h2 class="dib">/</h2>
+              <h2 class="dib" style="font-family: 'Libre Barcode 39 Extended', system-ui;">Poems</h2>
+            </div>
             <p class="pageSubTitle">
               I started writing when I was in 7th grade as a way to cope with 
               then-undiagnosed mental illnesses. By 9th grade, I had filled 
@@ -75,7 +79,7 @@
 
           <div class="poemDiv">
             <p>Undated &#x2022; <span id="the-five-w-readtime"></span></p>
-            <a href="poems/the-five-w's.html">
+            <a href="poems/the-five-ws.html">
               <h3>The Five W's</h3>
               <p>
                 This is one of my newest poems that I've written. It follows me
@@ -248,15 +252,16 @@
 
 <script>
   window.onload = (event) => {
-    $('#a-life-readtime').html(numberCount(aLifePoem));
-    $('#breaking-point-readtime').html(numberCount(breakingPointPoem));
-    $('#fear-readtime').html(numberCount(fearPoem));
-    $('#forgoten-readtime').html(numberCount(forgotenPoem));
-    $('#grief-readtime').html(numberCount(griefPoem));
-    $('#im-tired-readtime').html(numberCount(sectionImTired));
-    $('#malnourished-readtime').html(numberCount(malnourishedPoem));
-    $('#the-five-w-readtime').html(numberCount(theFiveWPoem));
+    setTimeout(() => {
+      $('#a-life-readtime').html(numberCount(aLifePoem));
+      $('#breaking-point-readtime').html(numberCount(breakingPointPoem));
+      $('#fear-readtime').html(numberCount(fearPoem));
+      $('#forgoten-readtime').html(numberCount(forgotenPoem));
+      $('#grief-readtime').html(numberCount(griefPoem));
+      $('#im-tired-readtime').html(numberCount(sectionImTired));
+      $('#malnourished-readtime').html(numberCount(malnourishedPoem));
+      $('#the-five-w-readtime').html(numberCount(theFiveWPoem));
+    }, "200");
   };
 </script>
-
 </html>
