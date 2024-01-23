@@ -83,6 +83,7 @@
           </div>
 
           <div class="poemDiv">
+            <p>Undated &#x2022; <span id="a-life-readtime"></span></p>
             <a href="poems/a-life.html">
               <h3>A Life</h3>
               <p>
@@ -95,6 +96,7 @@
           </div>
 
           <div class="poemDiv">
+            <p>Undated &#x2022; <span id="breaking-point-readtime"></span></p>
             <a href="poems/breaking-point.html">
               <h3>Breaking Point</h3>
               <p>
@@ -106,6 +108,7 @@
           </div>
 
           <div class="poemDiv">
+            <p>Undated &#x2022; <span id="fear-readtime"></span></p>
             <a href="poems/fear.html">
               <h3>Fear</h3>
               <p>
@@ -118,6 +121,7 @@
           </div>
 
           <div class="poemDiv">
+            <p>Undated &#x2022; <span id="forgoten-readtime"></span></p>
             <a href="poems/forgoten.html">
               <h3>Forgoten</h3>
               <p>
@@ -128,6 +132,7 @@
           </div>
 
           <div class="poemDiv">
+            <p>Undated &#x2022; <span id="grief-readtime"></span></p>
            <a href="poems/grief.html">
               <h3>Grief</h3>
               <p>
@@ -139,6 +144,7 @@
           </div>
 
           <div class="poemDiv">
+            <p>Undated &#x2022; <span id="im-tired-readtime"></span></p>
             <a href="poems/im-tired.html">
               <h3>I'm Tired</h3>
               <p>
@@ -149,6 +155,7 @@
           </div>
 
           <div class="poemDiv">
+            <p>Undated &#x2022; <span id="malnourished-readtime"></span></p>
             <a href="poems/malnourished.html">
               <h3>Malnourished</h3>
               <p>
@@ -231,10 +238,19 @@
     $('#innerframe8').load('https://pulcherrimumquaerere.com/Pages/poems/the-five-ws.html #theFiveWPoem');
   </script>
   
-  <script>
-    $('#the-five-w-readtime').html(numberCount(theFiveWPoem));
-  </script>
-
 </body>
+
+<script>
+  window.onload = (event) => {
+    $('#a-life-readtime').html(numberCount(aLifePoem));
+    $('#breaking-point-readtime').html(numberCount(breakingPointPoem));
+    $('#fear-readtime').html(numberCount(fearPoem));
+    $('#forgoten-readtime').html(numberCount(forgotenPoem));
+    $('#grief-readtime').html(numberCount(griefPoem));
+    $('#im-tired-readtime').html(numberCount(sectionImTired));
+    $('#malnourished-readtime').html(numberCount(malnourishedPoem));
+    $('#the-five-w-readtime').html(numberCount(theFiveWPoem));
+  };
+</script>
 
 </html>
