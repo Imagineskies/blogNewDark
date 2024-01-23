@@ -68,7 +68,7 @@
         <div class="row mx-auto align-items-center justify-content-center">
 
           <div class="poemDiv">
-            <p>Undated &#x2022; 1 min</p>
+            <p>Undated &#x2022; <span id="the-five-w-readtime"></span></p>
             <a href="poems/the-five-w's.html">
               <h3>The Five W's</h3>
               <p>
@@ -159,7 +159,7 @@
               </p>
             </a>
           </div>
-          
+
         </div>
       </div>
     </div>
@@ -215,10 +215,6 @@
   <!-- Bootstrap core JavaScript -->
   <script src="../js/bootstrap.bundle.min.js"></script>
 
-
-  <!-- Plugin JavaScript -->
-  <script src="../js/jquery.easing.min.js"></script>
-
   <!-- Custom scripts for this template -->
   <script src="../js/jquery.min.js"></script>
   <script src="../js/main.js"></script>
@@ -230,15 +226,13 @@
     $('#innerframe3').load('https://pulcherrimumquaerere.com/Pages/poems/fear.html #fearPoem');
     $('#innerframe4').load('https://pulcherrimumquaerere.com/Pages/poems/forgoten.html #forgotenPoem');
     $('#innerframe5').load('https://pulcherrimumquaerere.com/Pages/poems/grief.html #griefPoem');
-    $('#innerframe6').load('https://pulcherrimumquaerere.com/Pages/poems/im-tire.html #sectionImTired');
-    $('#innerframe7').load('https://pulcherrimumquaerere.com/Pages/poems/maluourished.html #malnourishedPoem');
-    $('#innerframe8').load('"https://pulcherrimumquaerere.com/Pages/poems/the-five-w\'s.html" #theFiveWPoem');
+    $('#innerframe6').load('https://pulcherrimumquaerere.com/Pages/poems/im-tired.html #sectionImTired');
+    $('#innerframe7').load('https://pulcherrimumquaerere.com/Pages/poems/malnourished.html #malnourishedPoem');
+    $('#innerframe8').load('https://pulcherrimumquaerere.com/Pages/poems/the-five-ws.html #theFiveWPoem');
   </script>
   
   <script>
-    window.onload = (event) => {
-      console.log(numberCount(aLifePoem));
-    };
+    $('#the-five-w-readtime').html(numberCount(theFiveWPoem));
   </script>
 
 </body>
