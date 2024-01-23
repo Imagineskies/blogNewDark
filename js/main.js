@@ -68,7 +68,16 @@ ________________________________________________________________________________
 document.documentElement.style.setProperty("--figureShortHight", shortImgScale);
 document.documentElement.style.setProperty("--figureLongHight", longImgScale);
 
-
+function numberCount(item) {
+  item = item.innerText;
+  item = item.split(/[\s]+|(?!['])\W+/);
+  item = item.filter(word => word.length > 0);
+  item = item.length;
+  item = item / 200;
+  item = Math.ceil(item)
+  item = item + " min";
+  return item;
+}
 
 /* Data Transfer Calculator */
 

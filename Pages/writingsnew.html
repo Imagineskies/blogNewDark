@@ -68,6 +68,7 @@
         <div class="row mx-auto align-items-center justify-content-center">
 
           <div class="poemDiv">
+            <p>Undated &#x2022; 1 min</p>
             <a href="poems/the-five-w's.html">
               <h3>The Five W's</h3>
               <p>
@@ -158,45 +159,20 @@
               </p>
             </a>
           </div>
-
-          <div class="poemDiv">
-            <a href="poems/me.html">
-              <h3>Me</h3>
-              <p>
-                As my friends and family know, I am transgender. Except this is the
-                only poem I've writen about any aspects of my gender identiy and the
-                reality I face. So here you'll read about how gender dysphoria effects
-                me and my personality as a trans woman.
-              </p>
-            </a>
-          </div>
-
-          <div class="poemDiv">
-            <a href="poems/nudity.html">
-              <h3>Nudity</h3>
-              <p class="poemDescription">
-                This is one of the few poems if it's kind that I've writen. It is
-                extremely personal to me and is very "private." Except most of my
-                poems are extentions of myself and emotions. With that being said,
-                I feel comforable sharing this.
-              </p>
-            </a>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div>
-      <div>
-        <div id="iphreameh">
           
         </div>
       </div>
     </div>
   </section>
+
+  <section class="hidden" id="innerframe1"></section>
+  <section class="hidden" id="innerframe2"></section>
+  <section class="hidden" id="innerframe3"></section>
+  <section class="hidden" id="innerframe4"></section>
+  <section class="hidden" id="innerframe5"></section>
+  <section class="hidden" id="innerframe6"></section>
+  <section class="hidden" id="innerframe7"></section>
+  <section class="hidden" id="innerframe8"></section>
 
   <footer>
     <div class="container">
@@ -237,17 +213,33 @@
 
 
   <!-- Bootstrap core JavaScript -->
-  <script src="../js/jquery.min.js"></script>
   <script src="../js/bootstrap.bundle.min.js"></script>
+
 
   <!-- Plugin JavaScript -->
   <script src="../js/jquery.easing.min.js"></script>
 
   <!-- Custom scripts for this template -->
+  <script src="../js/jquery.min.js"></script>
   <script src="../js/main.js"></script>
   <script src="../js/pvar.js"></script>
-
   
+  <script>
+    $('#innerframe1').load('https://pulcherrimumquaerere.com/Pages/poems/a-life.html #aLifePoem');
+    $('#innerframe2').load('https://pulcherrimumquaerere.com/Pages/poems/breaking-point.html #breakingPointPoem');
+    $('#innerframe3').load('https://pulcherrimumquaerere.com/Pages/poems/fear.html #fearPoem');
+    $('#innerframe4').load('https://pulcherrimumquaerere.com/Pages/poems/forgoten.html #forgotenPoem');
+    $('#innerframe5').load('https://pulcherrimumquaerere.com/Pages/poems/grief.html #griefPoem');
+    $('#innerframe6').load('https://pulcherrimumquaerere.com/Pages/poems/im-tire.html #sectionImTired');
+    $('#innerframe7').load('https://pulcherrimumquaerere.com/Pages/poems/maluourished.html #malnourishedPoem');
+    $('#innerframe8').load('"https://pulcherrimumquaerere.com/Pages/poems/the-five-w\'s.html" #theFiveWPoem');
+  </script>
+  
+  <script>
+    window.onload = (event) => {
+      console.log(numberCount(aLifePoem));
+    };
+  </script>
 
 </body>
 
